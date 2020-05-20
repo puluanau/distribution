@@ -117,7 +117,7 @@ func (registry *Registry) ListenAndServe() error {
 		tlsConf := &tls.Config{
 			ClientAuth:               tls.NoClientCert,
 			NextProtos:               []string{"http/1.1"},
-			MinVersion:               tls.VersionTLS10,
+			MinVersion:               tls.VersionTLS11,
 			PreferServerCipherSuites: true,
 			CipherSuites: []uint16{
 				tls.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,

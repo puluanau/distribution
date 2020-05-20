@@ -8,7 +8,7 @@ COPY . $DISTRIBUTION_DIR
 COPY cmd/registry/config-dev.yml /etc/docker/registry/config.yml
 
 RUN set -ex \
-    && apk add --no-cache make git
+    && apk add --no-cache make git bash ca-certificates apache2-utils
 
 RUN make PREFIX=/go clean binaries
 
